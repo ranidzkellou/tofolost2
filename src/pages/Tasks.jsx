@@ -8,7 +8,6 @@ import DashMin from "../components/DashMin";
 import Messages from "../components/Message";
 import { mockData, } from '../mockData';
 
-
 const sampleTasks = [
     {
       title: "Work",
