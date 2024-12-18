@@ -23,11 +23,9 @@ function WeekChat({ active, payload }) {
     { day: 'Sat', percentage: 30 }
   ];
 
-
-
   return (
-    <div className="w-full h-96 bg-white rounded-lg my-20">
-      <ResponsiveContainer width="100%" height="80%">
+    <div className="w-full h-[30rem] bg-white rounded-lg py-10 mb-20">
+      <ResponsiveContainer width="100%" height="100%">
         <BarChart data={data}>
           <CartesianGrid strokeDasharray="3 3" vertical={false} />
           
@@ -39,7 +37,6 @@ function WeekChat({ active, payload }) {
             tick={{ fill: '#0190F8' }}
           />
           <YAxis 
-            
             unit="%" 
             ticks={[0,50,100]}
             axisLine={false}

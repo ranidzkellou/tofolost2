@@ -1,17 +1,23 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import { AlertCircle } from 'lucide-react';
 
-
-const DataCard = ({ total = 25, completed = 11, title = "Les tâches en retard" }) => {
+const DataCard = ({ 
+  Icon, 
+  total = 25,
+  completed = 11, 
+  title = "Les tâches en retard",
+  bgIconColor
+  }) => {
   const percentage = Math.round((completed / total) * 100);
 
   return (
 
-    <div className="bg-bluemain text-white p-3 rounded-2xl w-72 ">
+    <div className="bg-bluemain text-white p-3 rounded-2xl w-80 ">
     <div className="">
-      <div className="bg-red-500 inline-block p-2 rounded-xl">
-        <AlertCircle size={30} />
+      <div className={`${bgIconColor} inline-block p-2 rounded-xl`}>
+        <Icon 
+        size={30} 
+        />
       </div>
     </div>
     
@@ -19,13 +25,11 @@ const DataCard = ({ total = 25, completed = 11, title = "Les tâches en retard" 
       {title}
     </h2>
     
-    {/* Progress Numbers */}
     <div className="mb-2">
       <span className="text-7xl font-bold">{completed}</span>
-      <span className="text-3xl font-light">/{total}</span>
+      <span className="text-3xl font-light text-sky-700">/{total}</span>
     </div>
     
-    {/* Percentage Text */}
     <p className="text-xs">
       you have completed <span className="text-green-400">{percentage}%</span>
     </p>

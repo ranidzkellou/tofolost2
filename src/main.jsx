@@ -19,8 +19,6 @@ import SignUp from './pages/SignUp'
 import Tasks from './pages/Tasks'
 import Dashboard from './pages/Dashboard'
 
-
-
 const router = createBrowserRouter([
   {
     path: "/",

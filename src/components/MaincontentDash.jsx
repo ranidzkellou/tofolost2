@@ -2,6 +2,8 @@ import DataCard from "../components/Datacard";
 import WeekChat from "./WeekChart";
 import Calendar from "./Calendar";
 import TaskDashboard from "./TaskDashboard";
+import { AlertCircle,Calendar as cal2,Coffee,Check } from 'lucide-react';
+
 
 function MaincontentDash() {
 
@@ -9,13 +11,26 @@ function MaincontentDash() {
     <>
       <div className="h-full w-full bg-background p-4 rounded-xl transition-all duration-200">
 
-        <div className="flex felx-row w-full gap-11 justify-center ">
-        <DataCard />
-        <DataCard />
-        <DataCard />
-        <DataCard />
-        </div> 
+        <div className="flex felx-row w-full gap-8 justify-between ">
+        <DataCard
 
+          bgIconColor={'bg-sky-400'}
+          Icon={cal2}
+        />
+        <DataCard
+        bgIconColor={'bg-green-400'}
+          Icon={Check}
+        />
+        <DataCard
+        bgIconColor={'bg-amber-400'}
+          Icon={Coffee}
+        />
+        <DataCard
+        bgIconColor={'bg-red-400'}
+          Icon={AlertCircle}
+        />
+        </div> 
+        <h1 className="text-accent font-bold text-5xl my-14">Résumé de cette semaine</h1>
         <WeekChat />   
 
         <div className="bg-blue-500 w-full h-ful rounded-full"></div>

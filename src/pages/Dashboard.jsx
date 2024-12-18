@@ -50,14 +50,16 @@ function Dashboard () {
   return (
 
     <>
-    <div className="flex gap-3 max-h-screen ">
+    <div className="flex gap-3 h-fullsd overflow-y-scroll ">
+
         <Sidebar 
             tasks={sampleTasks}
         />
 
-        <div className="flex w-full flex-col h-screen ">
+        <div className="flex w-full flex-col h-full ">
+            
             <Topbar />
-            <div className="main-content h-full w-full mt-3 overflow-hidden">
+            <div className="main-content h-full w-full mt-3">
                 <MaincontentDash />
             </div>
 

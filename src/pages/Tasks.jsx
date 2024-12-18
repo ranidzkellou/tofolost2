@@ -49,6 +49,26 @@ const sampleTasks = [
       ]
     }
   ];
+
+  const folders = [
+    {
+      id: 1,
+      name: "Work",
+      emoji: "💼",
+      tasks: [
+        {
+          id: 1,
+          title: "Task 1",
+          subtasks: [
+            { id: 1, title: "Subtask 1" }
+          ]
+        }
+      ]
+    }
+    // ... more folders
+  ];
+  
+  <Sidebar folders={folders} />
   
 function Tasks () {
 
@@ -134,7 +154,7 @@ function Tasks () {
     <>
         <div className="flex gap-3 h-full min-h-screen ">
             <Sidebar 
-                tasks={sampleTasks}
+                tasks={folders}
             />
 
             <div className="flex w-full flex-col h-full">
